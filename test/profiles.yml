@@ -1,0 +1,12 @@
+test:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: postgres
+      user: sofianlak
+      password: "{{ env_var('DBT_PASSWORD') }}"
+      port: 5432
+      dbname: openfood
+      schema: public
+      connect_timetout: 10
